@@ -20,7 +20,7 @@ export function Login({ mode = "signin" }: { mode?: "signin" | "signup" }) {
   const discountCode = searchParams.get("discountCode");
 
   const handleGoogleSignIn = () => {
-    const redirectTo = `${config.domainName}/api/auth/callback`;
+    const redirectTo = `http://localhost:3000/api/auth/callback`;
     setLoading(true);
     const supabase = createClient();
     supabase.auth.signInWithOAuth({
